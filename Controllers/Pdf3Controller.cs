@@ -54,6 +54,7 @@ namespace YourNamespace.Controllers
                             {
                                 using (var img = Pix.LoadFromMemory(ms.ToArray()))
                                 {
+
                                     using (var pageOcr = engine.Process(img))
                                     {
                                         text.AppendLine(pageOcr.GetText());
